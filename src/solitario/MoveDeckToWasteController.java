@@ -31,4 +31,14 @@ public class MoveDeckToWasteController {
 		return 0;
 	}
 
+	public int numberCardsInWaste() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int initialNumberCardsInWaste() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

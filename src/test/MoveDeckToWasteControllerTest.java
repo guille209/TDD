@@ -31,6 +31,14 @@ public class MoveDeckToWasteControllerTest {
 			assertEquals(moveDeckToWasteController.numberCardsInDeck(),moveDeckToWasteController.initialNumberCardsInDeck()-numberOfCardsMoved);
 		}
 	}
+	
+	@Test
+	public void numberCardsInWasteTest(){
+		if (!moveDeckToWasteController.initialDeckThreeOrLessCards()) {
+			int numberOfCardsMoved = 3;
+			assertEquals(moveDeckToWasteController.numberCardsInWaste(),moveDeckToWasteController.initialNumberCardsInWaste()+numberOfCardsMoved);
+		}
+	}
 
 	@Test
 	public void isDeckEmptyTest() {
