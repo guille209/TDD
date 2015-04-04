@@ -23,7 +23,6 @@ public class MoveDeckToWasteControllerTest {
 		moveDeckToWasteController = new MoveDeckToWasteController(deckCards,
 				wasteCards);
 	}
-
 	@Test
 	public void numberCardsInDeckTest() {
 		if (moveDeckToWasteController.initialDeckThreeOrLessCards()) {
@@ -51,7 +50,7 @@ public class MoveDeckToWasteControllerTest {
 	}
 	@Test
 	public void newCardsInWasteTest(){
-		ArrayList<Card> newCardsInWaste = moveDeckToWasteController.newCardsInWasteTest();
+		ArrayList<Card> newCardsInWaste = moveDeckToWasteController.newCardsInWaste();
 		System.out.println("Cojo las ultimas del waste:\n"+newCardsInWaste);
 		for(Card card: newCardsInWaste){		
 			assertNotNull(card);

@@ -17,6 +17,15 @@ public class Card {
 		return uncovered;
 	}
 
+	
+	public boolean isUncovered() {
+		return uncovered;
+	}
+
+	public void setUncovered(boolean uncovered) {
+		this.uncovered = uncovered;
+	}
+
 	@Override
 	public boolean equals(Object object) {
 		assert object instanceof Card;
