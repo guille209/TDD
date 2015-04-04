@@ -19,15 +19,30 @@ public class MoveDeckToWasteControllerTest {
 		Random r = new Random();
 		int deckCards = (r.nextInt(30)) + 1;
 		int wasteCards = r.nextInt(30);
-		moveDeckToWasteController = new MoveDeckToWasteController(
-				deckCards, wasteCards);
+		moveDeckToWasteController = new MoveDeckToWasteController(deckCards,
+				wasteCards);
 
+	}
+	
+	@Test
+	public void numberCardsInDeckTest(){
+		if (!moveDeckToWasteController.initialDeckThreeOrLessCards()) {
+			int numberOfCardsMoved = 3;
+			assertEquals(moveDeckToWasteController.numberCardsInDeck(),moveDeckToWasteController.initialNumberCardsInDeck()-numberOfCardsMoved);
+		}
 	}
 
 	@Test
-	public void deckIsEmpty() {
+	public void isDeckEmptyTest() {
 		if (moveDeckToWasteController.initialDeckThreeOrLessCards()) {
 			assertTrue(moveDeckToWasteController.isDeckEmpty());
+		}
+	}
+
+	@Test
+	public void isWasteWithInitialDeckCardsTest() {
+		if (moveDeckToWasteController.initialDeckThreeOrLessCards()) {
+			assertTrue(moveDeckToWasteController.isWasteWithInitialDeckCards());
 		}
 	}
 

@@ -16,4 +16,19 @@ public class MoveDeckToWasteController {
 		return true;
 	}
 
+	public boolean isWasteWithInitialDeckCards() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	public int numberCardsInDeck() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int initialNumberCardsInDeck() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
