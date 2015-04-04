@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import solitario.Card;
+import solitario.MoveDeckToWasteController;
 
 public class MoveDeckToWasteControllerTest {
 
@@ -20,6 +21,6 @@ public class MoveDeckToWasteControllerTest {
 		Random r = new Random();
 		int deckCards = r.nextInt(29);
 		int wasteCards = r.nextInt(29);
-		moveDeckToWasteControllerTest = new moveDeckToWasteController();
+		moveDeckToWasteControllerTest = new MoveDeckToWasteController(deckCards,wasteCards);
 	}
 }
