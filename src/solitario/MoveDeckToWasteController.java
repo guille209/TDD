@@ -1,5 +1,7 @@
 package solitario;
 
+import java.util.ArrayList;
+
 public class MoveDeckToWasteController {
 
 	public MoveDeckToWasteController(int deckCards, int wasteCards) {
@@ -39,6 +41,11 @@ public class MoveDeckToWasteController {
 	public int initialNumberCardsInWaste() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	public ArrayList<Card> newCardsInWasteTest() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -2,6 +2,7 @@ package test;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import org.junit.Before;
@@ -49,5 +50,13 @@ public class MoveDeckToWasteControllerTest {
 
 		}
 	}
-
+	
+	public void newCardsInWasteTest(){
+		ArrayList<Card> newCardsInWaste = moveDeckToWasteController.newCardsInWasteTest();
+		for(Card card: newCardsInWaste){		
+			assertNotNull(card);
+			assertTrue(card.uncovered());
+			assertEquals(newCardsInWaste.indexOf(card),newCardsInWaste.lastIndexOf(card));
+		}	
+	}
 }
