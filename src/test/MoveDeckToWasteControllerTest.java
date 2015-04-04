@@ -23,34 +23,30 @@ public class MoveDeckToWasteControllerTest {
 				wasteCards);
 
 	}
-	
-	@Test
-	public void numberCardsInDeckTest(){
-		if (!moveDeckToWasteController.initialDeckThreeOrLessCards()) {
-			int numberOfCardsMoved = 3;
-			assertEquals(moveDeckToWasteController.numberCardsInDeck(),moveDeckToWasteController.initialNumberCardsInDeck()-numberOfCardsMoved);
-		}
-	}
-	
-	@Test
-	public void numberCardsInWasteTest(){
-		if (!moveDeckToWasteController.initialDeckThreeOrLessCards()) {
-			int numberOfCardsMoved = 3;
-			assertEquals(moveDeckToWasteController.numberCardsInWaste(),moveDeckToWasteController.initialNumberCardsInWaste()+numberOfCardsMoved);
-		}
-	}
 
 	@Test
-	public void isDeckEmptyTest() {
+	public void numberCardsInDeckTest() {
 		if (moveDeckToWasteController.initialDeckThreeOrLessCards()) {
 			assertTrue(moveDeckToWasteController.isDeckEmpty());
+		} else {
+			int numberOfCardsMoved = 3;
+			assertEquals(moveDeckToWasteController.numberCardsInDeck(),
+					moveDeckToWasteController.initialNumberCardsInDeck()
+							- numberOfCardsMoved);
+
 		}
 	}
 
 	@Test
-	public void isWasteWithInitialDeckCardsTest() {
+	public void numberCardsInWasteTest() {
 		if (moveDeckToWasteController.initialDeckThreeOrLessCards()) {
 			assertTrue(moveDeckToWasteController.isWasteWithInitialDeckCards());
+		} else {
+			int numberOfCardsMoved = 3;
+			assertEquals(moveDeckToWasteController.numberCardsInWaste(),
+					moveDeckToWasteController.initialNumberCardsInWaste()
+							+ numberOfCardsMoved);
+
 		}
 	}
 
