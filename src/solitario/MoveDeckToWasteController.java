@@ -1,16 +1,36 @@
 package solitario;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Random;
 
 public class MoveDeckToWasteController {
 
+	private ArrayList<Card> deck;
+	private ArrayList<Card> waste;
+	private int initialDeckCards;
+	private int initialwasteCards;
+
 	public MoveDeckToWasteController(int deckCards, int wasteCards) {
-		// TODO Auto-generated constructor stub
+		deck = new ArrayList<Card>();
+		waste = new ArrayList<Card>();
+		for (int i = 1; i <= deckCards; i++) {
+			Random r = new Random();
+			deck.add(new Card(r.nextInt(4), r.nextInt(12), false));
+		}
+		for (int i = 1; i <= wasteCards; i++) {
+			Random r = new Random();
+			waste.add(new Card(r.nextInt(4), r.nextInt(12), true));
+		}
+		initialDeckCards = deckCards;
+		initialwasteCards = wasteCards;
+		System.out.println("Deck: "+deck);
+		System.out.println("Waste: "+waste);
 	}
 
 	public boolean initialDeckThreeOrLessCards() {
 		// TODO Auto-generated method stub
-		return true;
+		return initialDeckCards <= 3;
 	}
 
 	public boolean isDeckEmpty() {
@@ -44,8 +64,13 @@ public class MoveDeckToWasteController {
 	}
 
 	public ArrayList<Card> newCardsInWasteTest() {
-		// TODO Auto-generated method stub
-		return null;
+		if (initialDeckThreeOrLessCards()) {
+			return new ArrayList<Card>(waste.subList(waste.size()
+					- initialDeckCards, waste.size()));
+		} else {
+			return new ArrayList<Card>(waste.subList(waste.size() - 3,
+					waste.size()));
+		}
 	}
 
 }

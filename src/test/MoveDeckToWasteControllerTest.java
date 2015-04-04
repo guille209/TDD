@@ -22,7 +22,6 @@ public class MoveDeckToWasteControllerTest {
 		int wasteCards = r.nextInt(30);
 		moveDeckToWasteController = new MoveDeckToWasteController(deckCards,
 				wasteCards);
-
 	}
 
 	@Test
@@ -50,9 +49,10 @@ public class MoveDeckToWasteControllerTest {
 
 		}
 	}
-	
+	@Test
 	public void newCardsInWasteTest(){
 		ArrayList<Card> newCardsInWaste = moveDeckToWasteController.newCardsInWasteTest();
+		System.out.println("Cojo las ultimas del waste:\n"+newCardsInWaste);
 		for(Card card: newCardsInWaste){		
 			assertNotNull(card);
 			assertTrue(card.uncovered());
