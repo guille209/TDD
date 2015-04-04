@@ -12,14 +12,14 @@ import solitario.MoveDeckToWasteController;
 
 public class MoveDeckToWasteControllerTest {
 
-	private MoveDeckToWasteController moveDeckToWasteControllerTest;
+	private MoveDeckToWasteController moveDeckToWasteController;
 
 	@Before
 	public void before() {
 		Random r = new Random();
 		int deckCards = (r.nextInt(30)) + 1;
 		int wasteCards = r.nextInt(30);
-		moveDeckToWasteControllerTest = new MoveDeckToWasteController(
+		moveDeckToWasteController = new MoveDeckToWasteController(
 				deckCards, wasteCards);
 
 	}
@@ -27,7 +27,7 @@ public class MoveDeckToWasteControllerTest {
 	@Test
 	public void deckIsEmpty() {
 		if (moveDeckToWasteController.initialDeckThreeOrLessCards()) {
-			assertTrue(moveDeckToWasteControllerTest.isDeckEmpty());
+			assertTrue(moveDeckToWasteController.isDeckEmpty());
 		}
 	}
 
