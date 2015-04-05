@@ -9,7 +9,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import solitario.Card;
+import solitario.FoundationList;
 import solitario.MoveDeckToWasteController;
+import solitario.MoveWasteToFoundationController;
 
 public class MoveWasteToFoundationControllerTest {
 
@@ -21,21 +23,21 @@ public class MoveWasteToFoundationControllerTest {
 		int wasteCards = r.nextInt(30) + 1;
 		int foundationCards = r.nextInt(12) + 1;
 
-		moveWasteToFoundationController = new MoveWasteToFoundationsController(
+		moveWasteToFoundationController = new MoveWasteToFoundationController(
 				wasteCards, foundationCards);
 	}
 
 	@Test
 	public void numberCardsInWasteTest() {
 		assertEquals(
-				moveWasteToFoundationController.initialNumberCardsInWaste - 1,
-				moveWasteToFoundationController.numberCardsInWaste());
+				moveWasteToFoundationController.initialNumberCardsInWaste() - 1,
+				moveWasteToFoundationController.initialNumberCardsInWaste());
 
 	}
 
 	@Test
 	public void movedLastCardInWasteTest() {
-		assertTrue(moveWasteToFoundationController.initialLastCardInWaste(),
+		assertEquals(moveWasteToFoundationController.initialLastCardInWaste(),
 				moveWasteToFoundationController.getMovedCard());
 	}
 
@@ -43,7 +45,7 @@ public class MoveWasteToFoundationControllerTest {
 	public void numberCardsInFoundationTest() {
 
 		assertEquals(
-				moveWasteToFoundationController.initialNumberCardsInFoundation + 1,
+				moveWasteToFoundationController.initialNumberCardsInFoundation() + 1,
 				moveWasteToFoundationController.getCurrentFoundation().size());
 
 	}
@@ -65,7 +67,7 @@ public class MoveWasteToFoundationControllerTest {
 					new Card(movedCard.getSuit(), 1, movedCard.isUncovered()),
 					movedCard);
 		} else {
-			Card lastFoundationCard = moveWasteToFoundationsController.initialLastCardInFoundation();
+			Card lastFoundationCard = moveWasteToFoundationController.initialLastCardInFoundation();
 			assertEquals(lastFoundationCard.getNumber()+1,movedCard.getNumber());
 		}
 		assertTrue(movedCard.isUncovered());
