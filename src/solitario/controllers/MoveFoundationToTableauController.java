@@ -12,6 +12,7 @@ public class MoveFoundationToTableauController {
 	private ArrayList<Card> tableau;
 	private int initialFoundationCards;
 	private Card initialLastCardInFoundation;
+	private int initialNumberCardsInTableau;
 
 	public MoveFoundationToTableauController(int tableauCards) {
 		tableau = new ArrayList<>();
@@ -35,6 +36,7 @@ public class MoveFoundationToTableauController {
 			} while (newSuit == lastSuit);
 			tableau.add(new Card(newSuit, lastNumber - 1, true));
 		}
+		initialNumberCardsInTableau = tableau.size();
 
 		int suit;
 		do {
@@ -90,12 +92,12 @@ public class MoveFoundationToTableauController {
 
 	public int initialNumberCardsInTableau() {
 		// TODO Auto-generated method stub
-		return 0;
+		return initialNumberCardsInTableau;
 	}
 
 	public ArrayList<Card> getCurrentTableau() {
 		// TODO Auto-generated method stub
-		return null;
+		return tableau;
 	}
 
 	public Card initialLastCardInTableau() {
