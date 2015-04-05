@@ -41,6 +41,15 @@ public class MoveFoundationToTableauControllerTest {
 				moveFoundationToTableauController.getMovedCard());
 	}
 
-	
+	@Test
+	public void numberCardsInTableauTest() {
+
+		assertEquals(
+				moveFoundationToTableauController.initialNumberCardsInTableau() + 1,
+				moveFoundationToTableauController.getCurrentTableau().size());
+
+	}
+
+
 
 }
