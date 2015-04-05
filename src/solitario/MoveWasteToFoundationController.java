@@ -75,5 +75,10 @@ public class MoveWasteToFoundationController {
 		return null;
 	}
 
+	public int numberCardsInWaste() {
+		// TODO Auto-generated method stub
+		return waste.size();
+	}
+
 
 }

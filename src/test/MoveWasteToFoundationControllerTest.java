@@ -31,7 +31,7 @@ public class MoveWasteToFoundationControllerTest {
 	public void numberCardsInWasteTest() {
 		assertEquals(
 				moveWasteToFoundationController.initialNumberCardsInWaste() - 1,
-				moveWasteToFoundationController.initialNumberCardsInWaste());
+				moveWasteToFoundationController.numberCardsInWaste());
 
 	}
 
