@@ -51,7 +51,7 @@ public class MoveFoundationToTableauControllerTest {
 	}
 
 	@Test
-	public void movedCardSuitNotMatchesTableuLastCardSuit() {
+	public void movedCardSuitNotMatchesTableuLastCardSuitTest() {
 		ArrayList<Card> tableau = moveFoundationToTableauController
 				.getCurrentTableau();
 		Card movedCard = moveFoundationToTableauController.getMovedCard();
@@ -60,6 +60,15 @@ public class MoveFoundationToTableauControllerTest {
 
 	}
 
-	
+	public void isCorrectCardNumberTest() {
+		Card movedCard = moveFoundationToTableauController.getMovedCard();
+
+		Card lastTableauCard = moveFoundationToTableauController
+				.initialLastCardInTableau();
+		assertEquals(lastTableauCard.getNumber() - 1, movedCard.getNumber());
+
+		assertTrue(movedCard.isUncovered());
+	}
+
 
 }
