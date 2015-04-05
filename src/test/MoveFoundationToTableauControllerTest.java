@@ -2,11 +2,11 @@ package test;
 
 import static org.junit.Assert.*;
 
-
 import java.util.ArrayList;
 import java.util.Random;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import solitario.controllers.MoveFoundationToTableauController;
@@ -20,11 +20,12 @@ public class MoveFoundationToTableauControllerTest {
 
 	@Before
 	public void before() {
+
 		Random r = new Random();
-		int tableau = r.nextInt(12)+1;
+		int tableau = r.nextInt(11) + 1;
 
 		moveFoundationToTableauController = new MoveFoundationToTableauController(
-				 tableau);
+				tableau);
 	}
 
 	@Test
@@ -44,7 +45,7 @@ public class MoveFoundationToTableauControllerTest {
 
 	@Test
 	public void numberCardsInTableauTest() {
-
+		System.out.println("Ejecutando numberCardsInTableauTest");
 		assertEquals(
 				moveFoundationToTableauController.initialNumberCardsInTableau() + 1,
 				moveFoundationToTableauController.getCurrentTableau().size());
@@ -53,14 +54,13 @@ public class MoveFoundationToTableauControllerTest {
 
 	@Test
 	public void movedCardSuitNotMatchesTableuLastCardSuitTest() {
-		ArrayList<Card> tableau = moveFoundationToTableauController
-				.getCurrentTableau();
+
 		Card movedCard = moveFoundationToTableauController.getMovedCard();
-		assertNotEquals(tableau.get(tableau.size() - 1).getSuit(),
-				movedCard.getSuit());
+		assertNotEquals(moveFoundationToTableauController
+				.initialLastCardInTableau().getSuit(), movedCard.getSuit());
 
 	}
-
+	@Test
 	public void isCorrectCardNumberTest() {
 		Card movedCard = moveFoundationToTableauController.getMovedCard();
 
@@ -70,6 +70,5 @@ public class MoveFoundationToTableauControllerTest {
 
 		assertTrue(movedCard.isUncovered());
 	}
-
 
 }
