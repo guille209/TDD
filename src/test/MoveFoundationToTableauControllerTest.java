@@ -21,11 +21,10 @@ public class MoveFoundationToTableauControllerTest {
 	@Before
 	public void before() {
 		Random r = new Random();
-		int tableau = r.nextInt(12);
-		int foundationCards = r.nextInt(12);
+		int tableau = r.nextInt(12)+1;
 
 		moveFoundationToTableauController = new MoveFoundationToTableauController(
-				foundationCards, tableau);
+				 tableau);
 	}
 
 	@Test
