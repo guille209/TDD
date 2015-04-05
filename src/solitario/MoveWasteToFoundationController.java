@@ -9,6 +9,7 @@ public class MoveWasteToFoundationController {
 	private FoundationList<Card>foundation;
 	private int initialNumberCardsInWaste;
 	private Card initialLastCardInWaste;
+	private int initialNumberCardsInFoundation;
 
 	public MoveWasteToFoundationController(int wasteCards, int foundationCards) {
 
@@ -21,6 +22,7 @@ public class MoveWasteToFoundationController {
 		initialLastCardInWaste = new Card(foundation.getSuit(),foundationCards,true);
 		waste.add(initialLastCardInWaste);
 		initialNumberCardsInWaste = waste.size();
+		initialNumberCardsInFoundation = foundation.size(); 
 		Random rSuit = new Random();
 		int suit = rSuit.nextInt(4);
 		for (int i = 0; i < foundationCards; i++) {
