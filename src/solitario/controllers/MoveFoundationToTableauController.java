@@ -10,6 +10,8 @@ public class MoveFoundationToTableauController {
 
 	private FoundationList<Card> foundation;
 	private ArrayList<Card> tableau;
+	private int initialFoundationCards;
+	private Card initialLastCardInFoundation;
 
 	public MoveFoundationToTableauController(int tableauCards) {
 		tableau = new ArrayList<>();
@@ -43,11 +45,12 @@ public class MoveFoundationToTableauController {
 
 		foundation = new FoundationList<>(suit);
 		Random randomNumber = new Random();
-		int foundationCards = tableau.get(
+		initialFoundationCards = tableau.get(
 				tableau.size() - 1).getNumber();
-		for (int i = 0; i < foundationCards; i++) {
+		for (int i = 0; i < initialFoundationCards; i++) {
 			foundation.add(new Card(foundation.getSuit(), i, true));
 		}
+		initialLastCardInFoundation = foundation.get(foundation.size()-1);
 
 		System.out.println("Estado inicial");
 		System.out.println("Tableau con " + tableau.size() + " cartas: "
@@ -67,17 +70,17 @@ public class MoveFoundationToTableauController {
 
 	public int initialNumberCardsInFoundation() {
 		// TODO Auto-generated method stub
-		return 0;
+		return initialFoundationCards;
 	}
 
 	public int numberCardsInFoundation() {
 		// TODO Auto-generated method stub
-		return 0;
+		return foundation.size();
 	}
 
 	public Card initialLastCardInFoundation() {
 		// TODO Auto-generated method stub
-		return null;
+		return initialLastCardInFoundation;
 	}
 
 	public Card getMovedCard() {
