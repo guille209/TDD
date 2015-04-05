@@ -34,4 +34,13 @@ public class MoveFoundationToTableauControllerTest {
 				moveFoundationToTableauController.numberCardsInFoundation());
 	}
 
+	@Test
+	public void movedLastCardInFoundationTest() {
+		assertEquals(
+				moveFoundationToTableauController.initialLastCardInFoundation(),
+				moveFoundationToTableauController.getMovedCard());
+	}
+
+	
+
 }
