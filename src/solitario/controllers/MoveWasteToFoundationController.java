@@ -1,7 +1,10 @@
-package solitario;
+package solitario.controllers;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import solitario.entities.Card;
+import solitario.entities.FoundationList;
 
 public class MoveWasteToFoundationController {
 	

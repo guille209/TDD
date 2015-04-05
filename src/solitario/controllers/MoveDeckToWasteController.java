@@ -1,8 +1,10 @@
-package solitario;
+package solitario.controllers;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Random;
+
+import solitario.entities.Card;
 
 public class MoveDeckToWasteController {
 

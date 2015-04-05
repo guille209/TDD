@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 
-import solitario.Card;
-import solitario.StartController;
+import solitario.controllers.StartController;
+import solitario.entities.Card;
 
 public class StartControllerTest {
 

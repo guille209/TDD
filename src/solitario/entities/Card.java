@@ -1,4 +1,4 @@
-package solitario;
+package solitario.entities;
 
 public class Card {
 

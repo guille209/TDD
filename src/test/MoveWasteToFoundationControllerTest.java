@@ -8,10 +8,10 @@ import java.util.Random;
 import org.junit.Before;
 import org.junit.Test;
 
-import solitario.Card;
-import solitario.FoundationList;
-import solitario.MoveDeckToWasteController;
-import solitario.MoveWasteToFoundationController;
+import solitario.controllers.MoveDeckToWasteController;
+import solitario.controllers.MoveWasteToFoundationController;
+import solitario.entities.Card;
+import solitario.entities.FoundationList;
 
 public class MoveWasteToFoundationControllerTest {
 

@@ -1,4 +1,4 @@
-package solitario;
+package solitario.entities;
 
 import java.util.ArrayList;
 
