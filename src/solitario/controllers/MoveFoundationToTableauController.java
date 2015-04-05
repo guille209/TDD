@@ -87,7 +87,7 @@ public class MoveFoundationToTableauController {
 
 	public Card getMovedCard() {
 		// TODO Auto-generated method stub
-		return null;
+		return tableau.get(tableau.size()-1);
 	}
 
 	public int initialNumberCardsInTableau() {
