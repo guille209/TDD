@@ -13,10 +13,6 @@ public class Card {
 
 	}
 
-	public boolean uncovered() {
-		return uncovered;
-	}
-
 	
 	public boolean isUncovered() {
 		return uncovered;

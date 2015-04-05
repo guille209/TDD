@@ -31,7 +31,7 @@ public class StartControllerTest {
 		assertEquals(7, peeksEachTableau.size());
 		for (Card card : peeksEachTableau) {
 			assertNotNull(card);
-			assertTrue(card.uncovered());
+			assertTrue(card.isUncovered());
 			// assertFalse(peeksEachTableau.);
 		}
 
