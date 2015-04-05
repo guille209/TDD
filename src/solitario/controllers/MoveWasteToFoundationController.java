@@ -7,9 +7,9 @@ import solitario.entities.Card;
 import solitario.entities.FoundationList;
 
 public class MoveWasteToFoundationController {
-	
+
 	private ArrayList<Card> waste;
-	private FoundationList<Card>foundation;
+	private FoundationList<Card> foundation;
 	private int initialNumberCardsInWaste;
 	private Card initialLastCardInWaste;
 	private int initialNumberCardsInFoundation;
@@ -22,66 +22,51 @@ public class MoveWasteToFoundationController {
 			Random r = new Random();
 			waste.add(new Card(r.nextInt(4), r.nextInt(12), true));
 		}
-		initialLastCardInWaste = new Card(foundation.getSuit(),foundationCards,true);
+		initialLastCardInWaste = new Card(foundation.getSuit(),
+				foundationCards, true);
 		waste.add(initialLastCardInWaste);
 		initialNumberCardsInWaste = waste.size();
-		
+
 		Random rSuit = new Random();
 		int suit = rSuit.nextInt(4);
 		for (int i = 0; i < foundationCards; i++) {
-			foundation.add(new Card(foundation.getSuit(),i, true));
+			foundation.add(new Card(foundation.getSuit(), i, true));
 		}
-		initialNumberCardsInFoundation = foundation.size(); 
-		System.out.println("------------------------------\n\nEstado inicial:");
-		System.out.println("Waste: "+waste.size()+" cartas "+waste);
-		System.out.println("Foundation: "+foundation.size()+" cartas "+foundation);
-		
-		foundation.add(waste.remove(waste.size()-1));
-		
-		System.out.println("------------------------------\n\nEstado final:");
-		System.out.println("Waste: "+waste.size()+" cartas "+waste);
-		System.out.println("Foundation: "+foundation.size()+" cartas "+foundation);
+		initialNumberCardsInFoundation = foundation.size();
+
+		foundation.add(waste.remove(waste.size() - 1));
 	}
 
 	public int initialNumberCardsInWaste() {
-		// TODO Auto-generated method stub
 		return initialNumberCardsInWaste;
 	}
 
 	public Card initialLastCardInWaste() {
-		// TODO Auto-generated method stub
 		return initialLastCardInWaste;
 	}
 
 	public Card getMovedCard() {
-		// TODO Auto-generated method stub
-		return foundation.get(foundation.size()-1);
+		return foundation.get(foundation.size() - 1);
 	}
 
 	public FoundationList<Card> getCurrentFoundation() {
-		// TODO Auto-generated method stub
 		return foundation;
 	}
 
 	public int initialNumberCardsInFoundation() {
-		// TODO Auto-generated method stub
 		return initialNumberCardsInFoundation;
 	}
 
 	public boolean initialFoundationisEmpty() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	public Card initialLastCardInFoundation() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	public int numberCardsInWaste() {
-		// TODO Auto-generated method stub
 		return waste.size();
 	}
-
 
 }

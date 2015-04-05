@@ -28,9 +28,6 @@ public class MoveDeckToWasteController {
 		initialDeckCards = deck;
 		initialNumberDeckCards = deckCards;
 		initialNumberWasteCards = wasteCards;
-		System.out.println("Antes de mover");
-		System.out.println("Deck: " + deck);
-		System.out.println("Waste: " + waste);
 
 		if (initialDeckThreeOrLessCards()) {
 			for (Card card : deck) {
@@ -45,10 +42,6 @@ public class MoveDeckToWasteController {
 				waste.add(card);
 			}
 		}
-		System.out.println("Despues de mover");
-		System.out.println("Deck: " + deck);
-		System.out.println("Waste: " + waste);
-
 	}
 
 	public boolean initialDeckThreeOrLessCards() {
@@ -60,7 +53,8 @@ public class MoveDeckToWasteController {
 	}
 
 	public boolean isWasteWithInitialDeckCards() {
-		return initialDeckCards.equals(waste.subList(waste.size()-initialDeckCards.size(),waste.size()));
+		return initialDeckCards.equals(waste.subList(waste.size()
+				- initialDeckCards.size(), waste.size()));
 	}
 
 	public int numberCardsInDeck() {
@@ -69,17 +63,14 @@ public class MoveDeckToWasteController {
 	}
 
 	public int initialNumberCardsInDeck() {
-		// TODO Auto-generated method stub
 		return initialNumberDeckCards;
 	}
 
 	public int numberCardsInWaste() {
-		// TODO Auto-generated method stub
 		return waste.size();
 	}
 
 	public int initialNumberCardsInWaste() {
-		// TODO Auto-generated method stub
 		return initialNumberWasteCards;
 	}
 

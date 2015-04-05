@@ -23,6 +23,7 @@ public class MoveDeckToWasteControllerTest {
 		moveDeckToWasteController = new MoveDeckToWasteController(deckCards,
 				wasteCards);
 	}
+
 	@Test
 	public void numberCardsInDeckTest() {
 		if (moveDeckToWasteController.initialDeckThreeOrLessCards()) {
@@ -32,7 +33,6 @@ public class MoveDeckToWasteControllerTest {
 			assertEquals(moveDeckToWasteController.numberCardsInDeck(),
 					moveDeckToWasteController.initialNumberCardsInDeck()
 							- numberOfCardsMoved);
-
 		}
 	}
 
@@ -45,17 +45,19 @@ public class MoveDeckToWasteControllerTest {
 			assertEquals(moveDeckToWasteController.numberCardsInWaste(),
 					moveDeckToWasteController.initialNumberCardsInWaste()
 							+ numberOfCardsMoved);
-
 		}
 	}
+
 	@Test
-	public void newCardsInWasteTest(){
-		ArrayList<Card> newCardsInWaste = moveDeckToWasteController.newCardsInWaste();
-		System.out.println("Cojo las ultimas del waste:\n"+newCardsInWaste);
-		for(Card card: newCardsInWaste){		
+	public void newCardsInWasteTest() {
+		ArrayList<Card> newCardsInWaste = moveDeckToWasteController
+				.newCardsInWaste();
+		System.out.println("Cojo las ultimas del waste:\n" + newCardsInWaste);
+		for (Card card : newCardsInWaste) {
 			assertNotNull(card);
 			assertTrue(card.isUncovered());
-			assertEquals(newCardsInWaste.indexOf(card),newCardsInWaste.lastIndexOf(card));
-		}	
+			assertEquals(newCardsInWaste.indexOf(card),
+					newCardsInWaste.lastIndexOf(card));
+		}
 	}
 }

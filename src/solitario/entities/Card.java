@@ -32,7 +32,6 @@ public class Card {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		if (uncovered)
 			return "CARD[P:" + suit + ",N:" + number + ",Descubierta]\n";
 		else
@@ -42,13 +41,11 @@ public class Card {
 
 
 	public int getSuit() {
-		// TODO Auto-generated method stub
 		return suit;
 	}
 
 
 	public int getNumber() {
-		// TODO Auto-generated method stub
 		return number;
 	}
 

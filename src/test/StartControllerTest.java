@@ -32,7 +32,6 @@ public class StartControllerTest {
 		for (Card card : peeksEachTableau) {
 			assertNotNull(card);
 			assertTrue(card.isUncovered());
-			// assertFalse(peeksEachTableau.);
 		}
 
 	}

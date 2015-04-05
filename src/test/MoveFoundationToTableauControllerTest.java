@@ -60,6 +60,7 @@ public class MoveFoundationToTableauControllerTest {
 				.initialLastCardInTableau().getSuit(), movedCard.getSuit());
 
 	}
+
 	@Test
 	public void isCorrectCardNumberTest() {
 		Card movedCard = moveFoundationToTableauController.getMovedCard();
