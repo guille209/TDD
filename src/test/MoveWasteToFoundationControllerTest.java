@@ -21,7 +21,7 @@ public class MoveWasteToFoundationControllerTest {
 	public void before() {
 		Random r = new Random();
 		int wasteCards = r.nextInt(30) + 1;
-		int foundationCards = r.nextInt(12) + 1;
+		int foundationCards = r.nextInt(12);
 
 		moveWasteToFoundationController = new MoveWasteToFoundationController(
 				wasteCards, foundationCards);
