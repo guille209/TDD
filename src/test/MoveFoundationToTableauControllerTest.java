@@ -2,12 +2,14 @@ package test;
 
 import static org.junit.Assert.*;
 
+
 import java.util.ArrayList;
 import java.util.Random;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import solitario.controllers.MoveFoundationToTableauController;
 import solitario.controllers.MoveWasteToFoundationController;
 import solitario.entities.Card;
 import solitario.entities.FoundationList;
