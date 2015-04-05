@@ -22,13 +22,13 @@ public class MoveWasteToFoundationController {
 		initialLastCardInWaste = new Card(foundation.getSuit(),foundationCards,true);
 		waste.add(initialLastCardInWaste);
 		initialNumberCardsInWaste = waste.size();
-		initialNumberCardsInFoundation = foundation.size(); 
+		
 		Random rSuit = new Random();
 		int suit = rSuit.nextInt(4);
 		for (int i = 0; i < foundationCards; i++) {
 			foundation.add(new Card(foundation.getSuit(),i, true));
 		}
-		
+		initialNumberCardsInFoundation = foundation.size(); 
 		System.out.println("------------------------------\n\nEstado inicial:");
 		System.out.println("Waste: "+waste.size()+" cartas "+waste);
 		System.out.println("Foundation: "+foundation.size()+" cartas "+foundation);
@@ -62,7 +62,7 @@ public class MoveWasteToFoundationController {
 
 	public int initialNumberCardsInFoundation() {
 		// TODO Auto-generated method stub
-		return 0;
+		return initialNumberCardsInFoundation;
 	}
 
 	public boolean initialFoundationisEmpty() {
