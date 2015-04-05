@@ -26,5 +26,12 @@ public class MoveFoundationToTableauControllerTest {
 				foundationCards, tableau);
 	}
 
-	
+	@Test
+	public void numberCardsInFoundationTest() {
+		assertEquals(
+				moveFoundationToTableauController
+						.initialNumberCardsInFoundation() - 1,
+				moveFoundationToTableauController.numberCardsInFoundation());
+	}
+
 }
