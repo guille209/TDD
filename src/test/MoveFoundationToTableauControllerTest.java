@@ -50,6 +50,16 @@ public class MoveFoundationToTableauControllerTest {
 
 	}
 
+	@Test
+	public void movedCardSuitNotMatchesTableuLastCardSuit() {
+		ArrayList<Card> tableau = moveFoundationToTableauController
+				.getCurrentTableau();
+		Card movedCard = moveFoundationToTableauController.getMovedCard();
+		assertNotEquals(tableau.get(tableau.size() - 1).getSuit(),
+				movedCard.getSuit());
 
+	}
+
+	
 
 }
