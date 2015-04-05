@@ -4,10 +4,14 @@ import java.util.ArrayList;
 
 public class FoundationList<Card> extends ArrayList<Card> {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int suit;
 
 	public int getSuit() {
 		// TODO Auto-generated method stub
-		return 0;
+		return suit;
 	}
 }

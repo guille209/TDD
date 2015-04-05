@@ -43,13 +43,13 @@ public class Card {
 
 	public int getSuit() {
 		// TODO Auto-generated method stub
-		return 0;
+		return suit;
 	}
 
 
 	public int getNumber() {
 		// TODO Auto-generated method stub
-		return 0;
+		return number;
 	}
 
 }
