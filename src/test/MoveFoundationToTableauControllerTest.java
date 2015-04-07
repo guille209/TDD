@@ -45,7 +45,6 @@ public class MoveFoundationToTableauControllerTest {
 
 	@Test
 	public void numberCardsInTableauTest() {
-		System.out.println("Ejecutando numberCardsInTableauTest");
 		assertEquals(
 				moveFoundationToTableauController.initialNumberCardsInTableau() + 1,
 				moveFoundationToTableauController.getCurrentTableau().size());

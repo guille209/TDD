@@ -52,7 +52,6 @@ public class MoveDeckToWasteControllerTest {
 	public void newCardsInWasteTest() {
 		ArrayList<Card> newCardsInWaste = moveDeckToWasteController
 				.newCardsInWaste();
-		System.out.println("Cojo las ultimas del waste:\n" + newCardsInWaste);
 		for (Card card : newCardsInWaste) {
 			assertNotNull(card);
 			assertTrue(card.isUncovered());
